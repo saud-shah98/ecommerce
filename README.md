@@ -1,6 +1,5 @@
-## Lesson-7
-
-Creating header component to demonstrate where react-router renders our content on the page using <route> component
+## Developer
+Implementation of Redux & Features
 
 # How to fork and clone
 
