@@ -4,11 +4,12 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+  background-color: rgba(247, 247, 238, 0.941);
 
   .logo-container {
     height: 100%;
     width: 70px;
-    padding: 25px;
+    padding: 12px;
   }
 
   .options {
@@ -17,10 +18,13 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    
 
     .option {
       padding: 10px 15px;
       cursor: pointer;
+      
+ 
     }
   }
 }
