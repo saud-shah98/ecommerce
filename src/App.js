@@ -1,5 +1,6 @@
 import React from 'react';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+import './App.css';
 import CheckoutPage from './pages/checkout/checkout.component'
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -10,7 +11,9 @@ import { setCurrentUser } from './redux/user/user.actions'
 import ShopPage from './pages/shop/shop.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import './App.css';
+import { Amplify, API, Auth, Storage } from 'aws-amplify';
+const awsExports = require('@/aws-exports').default;
+
 
 
 class App extends React.Component {
@@ -19,6 +22,12 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
+
+      Amplify.register(API)
+  Amplify.register(Storage)
+  Amplify.register(Auth)
+  /* Register the services before configure */
+  Amplify.configure(awsExports)
 
     const { setCurrentUser } = this.props;
 
