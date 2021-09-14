@@ -13,17 +13,28 @@ import './header.styles.scss';
 const Header = ({ currentUser, hidden }) => (
   <div className='header'>
     <Link className='logo-container' to='/'>
-      <Logo className='logo' />
+    <span className='logo'>Import Exotic</span>
     </Link>
     <div className='options'>
-      <Link className='option' to='/shop'>
-        SHOP
+
+      <Link className='option' to='/shop/sofas'>
+        Sofas
       </Link>
-      <Link className='option' to='/shop'>
-        CONTACT
+      <Link className='option' to='/shop/tables'>
+        Tables
       </Link>
+      <Link className='option' to='/shop/chairs'>
+        Chairs
+      </Link>
+      <Link className='option' to='/shop/outdoor'>
+        Outdoor
+      </Link>
+      <Link className='option' to='/shop/indoor'>
+        Indoor
+      </Link>
+    
       {currentUser ? (
-        <div className='option' onClick={() => auth.signOut()}>SIGN OUT</div>
+        <div className='user' onClick={() => auth.signOut()}>SIGN OUT</div>
       ) : (
           <Link className='option' to='/signin'>SIGN IN</Link>
         )}

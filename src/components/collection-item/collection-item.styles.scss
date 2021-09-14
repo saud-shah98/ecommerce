@@ -20,7 +20,7 @@
     top: 255px;
     display: none;
   }
-  
+
   &:hover {
     .image {
       opacity: 0.8;
@@ -42,10 +42,12 @@
     .name {
       width: 90%;
       margin-bottom: 15px;
+      color: rgb(2, 1, 1);
     }
 
     .price {
       width: 10%;
+      color: rgb(3, 0, 0);
     }
   }
 }

@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  border: 1px solid rgb(170, 156, 156);
   margin: 0 7.5px 15px;
   overflow: hidden;
 
@@ -48,21 +48,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
-    background-color: white;
-    opacity: 0.7;
+    border: 1px solid rgb(80, 66, 66);
+    background-color: rgb(39, 22, 22);
+    opacity: 1;
     position: absolute;
 
     .title {
       font-weight: bold;
       margin: 0 6px 0;
       font-size: 22px;
-      color: #4a4a4a;
+      color: whitesmoke;
     }
 
     .subtitle {
       font-weight: lighter;
       font-size: 16px;
+      color: #ffffff;
     }
   }
 }
