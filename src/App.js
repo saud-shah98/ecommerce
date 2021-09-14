@@ -11,8 +11,7 @@ import { setCurrentUser } from './redux/user/user.actions'
 import ShopPage from './pages/shop/shop.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { Amplify, API, Auth, Storage } from 'aws-amplify';
-const awsExports = require('@/aws-exports').default;
+
 
 
 
@@ -23,11 +22,6 @@ class App extends React.Component {
 
   componentDidMount() {
 
-      Amplify.register(API)
-  Amplify.register(Storage)
-  Amplify.register(Auth)
-  /* Register the services before configure */
-  Amplify.configure(awsExports)
 
     const { setCurrentUser } = this.props;
 
